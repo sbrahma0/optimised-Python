@@ -1,11 +1,17 @@
+/**
+starts with 0 index, gets the element of that index then (that number-1) index element is checked whether it is -ve, if it 
+is not then make it -ve else the previous index i.e., the index in the current loop is the answer
+https://youtu.be/XSdr_O-XVRQ
+**/
+
 #include <iostream> 
 using namespace std; 
   
-// Function to print duplicates 
-int printRepeating(int arr[], int size) 
-{ 
-int i;
-for (i = 0; i < size; i++) 
+// Function to print duplicates
+// size has to be given as an argument since when we pass an array as an arguement, only the memory address is passed
+int printRepeating(int arr[], int size) // int arr[] can be also written as *arr
+{
+for (int i = 0; i < size; i++) 
 { 
     //cout<<i<<endl;
     if (arr[abs(arr[i])-1] >= 0) 
