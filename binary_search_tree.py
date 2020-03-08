@@ -55,6 +55,15 @@ class binary_search_tree:
         elif data == current_node.data:
             return True
     
+    # This function is to calculate the height of the node
+    def height(self, node):
+        if node is None:
+            return -1
+        left_height = self.height(node.left)
+        right_height = self.height(node.right)
+        
+        return 1+max(left_height,right_height)
+    
 bst = binary_search_tree()
 bst.insert(4)
 bst.insert(2)
@@ -62,4 +71,9 @@ bst.insert(8)
 bst.insert(5)
 bst.insert(10)
 
+# Finding the existance of a value in the tree
 print(bst.find(1))
+# Finding th eheight if a given node
+print(bst.height(bst.root.right))
+# Printinh the value of a node
+print(bst.root.right.left.data)
