@@ -226,7 +226,7 @@ class linked_list:
             s.nest = q
         if not q:
             s.nest = p
-        
+        # We need to return this new_head if we want to continue to manupulate the new list formed
         return new_head
 
         
