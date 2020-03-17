@@ -262,9 +262,13 @@ class linked_list:
         return
     
     def nth_node_from_last_method2(self, pos):
+        # here the idea is that there are 2 pointers p and q, p is initiated wth head node and the q is "pos" position node
+        # which is done in the while loop. And the next while loop is run untill the q becomes None, when it is None the pth
+        # data is the value we want.
         p = self.head
         q = self.head
         
+        # This is the base fact that if the position id same as that of the length of the list it will return the head value
         if pos == self.count_length():
             return self.head.data
         count = 0
