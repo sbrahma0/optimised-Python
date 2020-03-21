@@ -1,4 +1,5 @@
 # Array advanced game Non-greedy approach
+# https://youtu.be/r7EzxgrYfNg?list=PL5tcWHG-UPH112e7AN7C-fwDVPVrt0wpV
 
 def array_advance_game(given_array):
     index = 0
