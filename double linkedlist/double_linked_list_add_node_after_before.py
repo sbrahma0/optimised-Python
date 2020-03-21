@@ -47,6 +47,7 @@ class double_linked_list:
                 cur.nest = new_node
                 new_node.prev = cur
                 new_node.nest = temp
+                temp.prev = new_node
             cur = cur.nest
     
     def add_node_before(self, key, new_node):
@@ -64,6 +65,7 @@ class double_linked_list:
                     new_node.nest = cur
                     new_node.prev = prev
                     prev.nest = new_node
+                    cur.prev = new_node
                 prev = cur
                 cur = cur.nest
 
