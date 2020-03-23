@@ -1,4 +1,3 @@
-# https://realpython.com/beginners-guide-python-turtle/
 import turtle
 from collections import deque
 # grid = please paste a grid config from the grid.py
