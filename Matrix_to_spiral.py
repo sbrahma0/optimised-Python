@@ -41,3 +41,12 @@ a = [ [1, 2, 3, 4],
         
 R = 4; C = 4
 spiralPrint(R, C, a) 
+
+
+
+
+
+
+
+
+#https://www.geeksforgeeks.org/print-a-given-matrix-in-spiral-form/
