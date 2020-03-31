@@ -21,7 +21,7 @@ def max_multiple_of_3(l):
                 return int(max_div_3)
         b -= 1
 
-    return int(0)
+    return 0
 
 arr = [2,7]
 print(max_multiple_of_3(arr))
