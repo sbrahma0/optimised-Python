@@ -1,4 +1,6 @@
 # https://realpython.com/beginners-guide-python-turtle/  -  This is the fundamental of the turtle graphics library
+# It is recommended to use the deque library from collection module since its time complexity for append and pop from both
+# side is O(n).
 import turtle
 grid = [
 "+++++++++++++++++++++++++++++++++++++++++++++++++++",
