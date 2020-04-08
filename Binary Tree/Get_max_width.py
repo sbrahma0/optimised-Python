@@ -39,6 +39,32 @@ def getWidth(root, level):
     else:
         return (getWidth(root.left, level-1)+getWidth(root.right, level-1))
 
+# The above mentioned method is of O(n^2)
+# Below is O(n)
+# Comment all the functions above this, except the class node
+'''
+def getMaxWidth(root): # acceps the head of a binary tree
+    if root is None:
+        return 0
+    
+    maxwidth = 0
+    q = []
+    q.insert(0,root)
+    while q != []:
+        count = len(q)
+        maxwidth = max(count, maxwidth)
+        
+        while count != 0:
+            count -= 1
+            temp = q[-1]
+            q.pop()
+            if temp.left:
+                q.insert(0, temp.left)
+            if temp.right:
+                q.insert(0, temp.right)
+    
+    return maxwidth
+'''
 
 root = Node(1)
 root.left = Node(2)
