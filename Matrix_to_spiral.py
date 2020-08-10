@@ -1,8 +1,8 @@
 # Printing a Matrix in spiral form
 
 def spiralPrint(m,n,a): # n-col, m-row
-    k = 0
-    l = 0
+    k = 0 # for row
+    l = 0 # for col
     
     while k<m and l<n:
         # From left to right
