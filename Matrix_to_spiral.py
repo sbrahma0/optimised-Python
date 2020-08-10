@@ -1,6 +1,6 @@
 # Printing a Matrix in spiral form
 
-def spiralPrint(m,n,a):
+def spiralPrint(m,n,a): # n-col, m-row
     k = 0
     l = 0
     
