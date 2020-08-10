@@ -12,7 +12,8 @@ def split(array):
         split(left)
         split(right)
         merge(left,right,array)
-    
+    else:
+        return array
 
 def merge(left, right, array):
     i=0 # This is to traverse the elements in the left array
