@@ -64,7 +64,7 @@ def col_win():
 
 def dia_win():
     dia1 = board[6] == board[4] == board[2] != '_'
-    dia2 = board[1] == board[4] == board[8] != '_'
+    dia2 = board[0] == board[4] == board[8] != '_'
     
     if dia1 or dia2:
         return True
