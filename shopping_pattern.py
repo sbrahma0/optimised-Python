@@ -1,5 +1,11 @@
 # https://youtu.be/U196c9aQq5c
+'''
 
+                            Online Python Interpreter.
+                Code, Compile, Run and Debug python program online.
+Write your code in this editor and press "Run" button to execute it.
+
+'''
 def get_adjs_lsit(num_nodes, from_list, to_list): # Getting the adjacent list i.e., the graph
     adj_list = [[] for _ in range (num_nodes+1)]
     
@@ -34,6 +40,7 @@ def visit(at, parent, partial, adj_list, visited, all_trios):
     # Backtracking
     partial.pop()
     visited[at] = False
+
 def get_cycles(num_nodes, from_list, to_list):
     adj_list = get_adjs_lsit(num_nodes, from_list, to_list)
     print(adj_list)
@@ -46,8 +53,21 @@ def get_cycles(num_nodes, from_list, to_list):
             visit(node,-1,[],adj_list, visited, all_trios)
             pass
     
-    print("all trios",all_trios)
-from_list = [1,2,2,3,4,5]
-to_list = [2,4,5,5,5,6]
+    all_trios = list(all_trios)
+    min_product = int('inf')
+    
+    for trio in all_trios:
+        min_score = -6
+        
+        for num in trio:
+            min_score += len(adj_list[num])
+        min_product = min(min_product, min_score)
+    
+    return min_product if min_product != float('inf') else -1
+    
+    
+    
+from_list = [1,2,2,3,4,5,2]
+to_list = [2,4,5,5,5,6,3]
 num_nodes = 6
 get_cycles(num_nodes, from_list, to_list)
